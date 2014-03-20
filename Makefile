@@ -36,7 +36,7 @@ OBJ2 = cmcrlog.o
 
 OBJTEST = slabtest.o
 
-default: cmc_w_log
+default: cmc_w_log cmc_p_log cmc_r_log 
 
 VER = 2.0
 
@@ -50,7 +50,7 @@ cmc_p_log: ${OBJ2} cmc_p_log.o
 cmc_r_log: ${OBJ2} cmc_r_log.o
 	s.cc cmc_r_log.c -o $@_$(VER)-$(BASE_ARCH) cmcrlog.o -l$(LIBRMN)
 
-net_w_log: ${OBJECT} net_w_log.o
+net_w_log: net_w_log.o
 	s.cc net_w_log.c -o $@_$(VER)-$(BASE_ARCH) -l$(LIBRMN)
 
 cmc_w_log: cmc_w_log.o 
