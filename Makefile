@@ -14,11 +14,9 @@ SUPP_OPT = -openmp
 
 OPTIMIZ = 2
 
-RMNLIB_BASE_PATH=$(ARMNLIB)
+CPPFLAGS = 
 
-CPPFLAGS = -I$(ARMNLIB)/include
-
-MYLIB = $(RMNLIB_BASE_PATH)/lib/$(EC_ARCH)$(ABI)/librmnbeta.a
+MYLIB = $(ARMNLIB)/lib/$(EC_ARCH)$(ABI)/librmnbeta.a
 
 TEMPLIB = ./$(EC_ARCH)/lib_local.a
 
@@ -28,7 +26,7 @@ TARRLS = beta
 
 .PRECIOUS: $(MYLIB)
 
-include $(ARMNLIB)/include/makefile_suffix_rules.inc
+include $(RPN_TEMPLATE_LIBS)/include/makefile_suffix_rules.inc
 
 OBJECT = cmcwlog.o 
 
