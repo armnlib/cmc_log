@@ -20,7 +20,7 @@ MYLIB = $(ARMNLIB)/lib/$(EC_ARCH)$(ABI)/librmnbeta.a
 
 TEMPLIB = ./$(EC_ARCH)/lib_local.a
 
-LIBRMN = rmn_015.1
+LIBRMN = rmn_015.2
 
 TARRLS = beta
 
@@ -36,7 +36,7 @@ OBJTEST = slabtest.o
 
 default: cmc_w_log cmc_p_log cmc_r_log 
 
-VER = 2.1
+VER = 2.2
 
 obj: $(OBJECT) $(OBJ2)
 #Produire les fichiers objets (.o) pour tous les fichiers
